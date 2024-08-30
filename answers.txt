@@ -1,0 +1,37 @@
+ECE 3058
+Thread Scheduling Lab
+
+Name: Yashad Gurude
+GT Username: ygurude3
+
+Problem 1B
+----------
+
+No there is not a linear relationship between the number of CPUs and total execution time. The OS simulation for 1 CPU took 67.2s to execute, 2 CPUs took 36.2s to execute, 4 CPUs took 33.2s to execute. The slope between the first two and the second two is much different so it is not linear. This is due to the fact that the new added CPU is able to handle more threads at the same time the first CPU is handling threads therefore increasing efficiency. But with more than 2 CPUs it won't increase the efficiency by that much in our simulation as they stay the IDLE state a lot more due to not that many threads being ran.
+
+Problem 2B
+----------
+
+Time Slice: 800ms
+Context Switches: 136
+Execution Time: 67.6s
+Time Spent in READY state: 325.4s
+
+Time Slice: 600ms
+Context Switches: 161
+Execution Time: 67.6s
+Time Spent in READY state: 314.1s
+
+Time Slice: 400ms
+Context Switches: 203
+Execution Time: 67.6s
+Time Spent in READY state: 299.9s
+
+Time Slice: 200ms
+Context Switches: 362
+Execution Time: 67.6s
+Time Spent in READY state: 385.2
+
+As the time slice amount decreased, time spent in the READY state, which is the waiting time, went down. But at the same time the amount of context switches goes up. In a real OS the shortest time slice possible is usually not the best choice because of the context switches and cache misses which both reduce the CPU's efficiency.
+
+
